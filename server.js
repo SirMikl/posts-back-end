@@ -20,16 +20,16 @@ db.mongoose
     useUnifiedTopology: true
   })
   .then(() => {
-    console.log("Connected to the database!");
+    console.log("Подключен к базе данных!");
   })
   .catch(err => {
-    console.log("Cannot connect to the database!", err);
+    console.log("Не могу подключиться к базе данных!", err);
     process.exit();
   });
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Добро пожаловть в бэк-энд приложения Алейникова." });
 });
 
 require("./app/routes/tutorial.routes")(app);
@@ -37,5 +37,5 @@ require("./app/routes/tutorial.routes")(app);
 // set port, listen for requests
 const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+  console.log(`Сервер запущен на порту ${PORT}.`);
 });
